@@ -1,0 +1,177 @@
+!  ____ _____
+! |  _ \_   _|  Derek Taylor (DistroTube)
+! | | | || |    http://www.youtube.com/c/DistroTube
+! | |_| || |    http://www.gitlab.com/dwt1/
+! |____/ |_|
+
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+XTerm*renderFont: true
+!XTerm*faceName: xft:UbuntuMono Nerd Font
+!XTerm*faceSize: 11
+!XTerm*faceName: xft:MesloLGS Nerd Font
+!XTerm*faceName: xft:CaskaydiaCoveNerdFontMono
+XTerm*faceName: xft:CaskaydiaCove Nerd Font Mono
+XTerm*faceSize: 10
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
+
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+URxvt.perl-lib: $HOME/.urxvt/ext
+! URxvt*imLocale: en_US.UTF-8
+URxvt*imLocale: ko_KR.UTF-8
+URxvt*termName: rxvt-unicode-256color
+! URxvt*termName: screen-256color
+Urxvt*buffered: false
+URxvt.intensityStyles: false
+!URxvt.font: xft:UbuntuMono Nerd Font:size=11
+!URxvt.font: xft:CaskaydiaCoveNerdFontMono:size=11
+URxvt.font: xft:CaskaydiaCove Nerd Font Mono:size=10
+!URxvt.font: xft:MesloLGS Nerd Font:size=11
+! URxvt.saveLines: 2000
+! URxvt.scrollBar: false
+URxvt.cursorColor: white
+
+! enable scrollbar
+!URxvt*scrollBar:          true     
+! scrollbar width
+URxvt*thickness:          5
+! scrollbar color
+URxvt*scrollColor:        #1E1E1E
+! scrollbar trough area color
+!URxvt*troughColor:        #333333
+! scrollbar without a trough
+!URxvt*scrollBar_floating: false
+! scrollbar to the right
+URxvt*scrollBar_right:    true
+! scrollbar style
+URxvt*scrollstyle:        plain
+
+!! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger:  C-k
+!! Matcher
+URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+!!clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt*depth: 32
+
+
+! Dracula Xresources palette
+!! COLORS
+
+! special
+URxvt*foreground:   #bbc5ff
+URxvt*background:   [95]#000000
+URxvt*cursorColor:  #bbc5ff
+
+XTerm*foreground: #bbc5ff
+!!Xterm*background: #292d3e
+XTerm*background: #000000
+XTerm*cursorColor: #bbc5ff
+
+! black
+*.color0:       #101010
+*.color8:       #434758
+
+! red
+*.color1:       #f07178
+*.color9:       #ff8b92
+
+! green
+*.color2:       #c3e88d
+*.color10:      #ddffa7
+
+! yellow
+*.color3:       #ffcb6b
+*.color11:      #ffe585
+
+! blue
+*.color4:       #82aaff
+*.color12:      #9cc4ff
+
+! magenta
+*.color5:       #c792ea
+*.color13:      #e1acff
+
+! cyan
+*.color6:       #89ddff
+*.color14:      #a3f7ff
+
+! white
+*.color7:       #d0d0d0
+*.color15:      #ffffff
+
+! rofi.modi:                           ssh,window,drun,run
+! rofi.sidebar-mode:                   true
+! rofi.terminal:                       urxvt
+! rofi.ssh-client:                     ssh
+! rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
+! rofi.opacity:                        100
+! rofi.width:                          35
+! rofi.lines:                          10
+! rofi.columns:                        1
+! rofi.font:                           Consolas 12
+! rofi.fg:                             #5294E2
+! rofi.bg:                             #5d729f
+! rofi.fg-active:                      #34405a
+! rofi.fg-urgent:                      #34405a
+! rofi.hlfg-active:                    #5e73a0
+! rofi.hlfg-urgent:                    #5e73a0
+! rofi.bg-active:                      #34405a
+! rofi.bg-urgent:                      #34405a
+! rofi.hlbg-active:                    #5d729f
+! rofi.hlbg-urgent:                    #5d729f
+! rofi.bgalt:                          #5671a0
+! rofi.hlfg:                           #34405a
+! rofi.hlbg:                           #34405a
+! rofi.bc:                             #789ee1
+! ! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+! rofi.color-normal: #353944,  #FFFFFF,  #353944,  #5294E2,  #FFFFFF
+! rofi.color-normal: #353944,  #FFFFFF,  #353944,  #5294E2,  #FFFFFF
+! rofi.color-normal: #353944,  #FFFFFF,  #353944,  #5294E2,  #FFFFFF
+! 
+! !                  'background', 'border'
+! rofi.color-window: #353944,      #404552
+! rofi.bw:                             10
+! rofi.location:                       0
+! rofi.padding:                        20
+! rofi.levenshtein-sort:               true
+! rofi.case-sensitive:                 false
+! rofi.fuzzy:                          false
+! rofi.line-margin:                    2
+! rofi.separator-style:                solid
+! rofi.hide-scrollbar:                 true
+! rofi.markup-rows:                    false
+! rofi.scrollbar-width:                8

@@ -1,0 +1,35 @@
+#! /bin/bash -f
+
+tmux new-session -s "0-lig" -n "rtl" -d
+tmux new-window -n "sim" -d
+tmux new-window -n "imp" -d
+
+tmux new-session -s "1-rtt3" -n "rtl" -d
+tmux new-window -n "sim" -d
+tmux new-window -n "imp" -d
+
+tmux new-session -s "2-rtt2" -n "rtl" -d
+tmux new-window -n "sim" -d
+tmux new-window -n "imp" -d
+
+tmux new-session -s "3-etc" -n "etc" -d
+# tmux new-window -n "sim" -d
+# tmux new-window -n "imp" -d
+
+# tmux new-session -s "1 - IXA" -n "rtl" -d
+# tmux new-window -n "sim" -d
+# tmux new-window -n "imp" -d
+
+# tmux new-session -s "2 - IXA2" -n "rtl" -d
+# tmux new-window -n "sim" -d
+# tmux new-window -n "imp" -d
+
+# tmux new-session -s "3 - RTT_5G" -n "rtl" -d
+# tmux new-window -n "sim" -d
+# tmux new-window -n "imp" -d
+
+# tmux new-session -s "5 - RTT_FR1_es1_1g" -n "rtl" -d
+# tmux new-window -n "sim" -d
+# tmux new-window -n "imp" -d
+
+tmux -2 attach-session -t 0 -c 1

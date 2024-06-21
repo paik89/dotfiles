@@ -1,0 +1,167 @@
+export LS_COLORS="di=01;33":"ow=04;33"
+
+# export definitions
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+# export LC_ALL=C  			#perl: warning: Falling back to the standard locale("C").
+# export LANG=en_US
+# export LANG=C
+# export ECLIPSE_PATH=/usr/share/eclipse
+
+# Shell Prompt
+# export PS1="\[\e[36;1m\]\u:\[\e[31;1m\]\w:> \[\e[0m\]"
+
+export TCL_LIBRARY=/usr/lib/tcl8.4/
+export TK_LIBRARY=/usr/share/tk8.4/
+
+#source ~/.bash_completion_tmux.sh
+
+#export XILINX=/mnt/c/Xilinx/Vivado/2018.3
+#export PATH=/bin:/etc:/usr/local/bin:/usr/bin:/home/paik/utils:${PATH}
+#export PATH=${PATH}:/usr/share/eclipse:${HOME}/eclipse/cpp-oxygen/eclipse:.
+#export PATH=${PATH}:${XILINX}/bin:.
+
+export PATH=.:/bin:/usr/local/bin:/usr/bin:/home/paik/bin
+export PATH=${PATH}:/usr/local/sbin:/usr/sbin:/var/lib/snapd/snap/bin
+
+export SVN_EDITOR=/bin/vim
+
+# some more ls aliases
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ssh='ssh -Y'
+alias ctags="universal-ctags --extras=+q --fields=+i"
+
+# User specific aliases and functions
+alias lsc="ls --color"
+alias lsf="ls -h -lF  --color=auto --show-control-chars"
+alias lsa="ls -h -AlF --color=auto --show-control-chars"
+alias cls="clear"
+alias cp="cp -ip"
+alias rm="rm -i"
+alias mv="mv -i"
+alias less="less -g -x 4"
+alias h="history 800"
+alias vir="vi -R"
+alias makesim='mkdir -p sim/tb; mkdir -p sim/log; mkdir -p sim/out'
+# alias makesim='mkdir -p sim/tb; mkdir -p sim/log; mkdir -p sim/out; cp ${HOME}/sim_src/* sim'
+alias diff="diff -w"
+alias nvim="/var/lib/snapd/snap/bin/nvim"
+# alias vi="/var/lib/snapd/snap/bin/vim-editor"
+# alias vim="/var/lib/snapd/snap/bin/vim-editor"
+
+alias octave="octave --no-gui"
+alias tmux="/usr/local/bin/tmux"
+
+alias svn_cleanup="svn status --no-ignore | grep '^[I?]' | cut -c 9- | while IFS= read -r f; do rm -rf '$f'; done"
+
+alias vncis="vncserver -geometry 1920x1080 :2"
+alias vncik="vncserver -kill :2"
+
+alias sixa='source ${HOME}/env/set_ixa.sh'
+alias sixap='source ${HOME}/env/set_ixa_pci.sh'
+alias s122='source ${HOME}/env/set_ixa2_122.sh'
+alias s122p='source ${HOME}/env/set_ixa2_122_pci.sh'
+alias srtt='source ${HOME}/env/set_rtt_5g.sh'
+# alias srtt2r='source ${HOME}/env/set_rtt2_rate_conv_full.sh'
+alias srtt2='source ${HOME}/env/set_rtt2_ver3.sh'
+#alias srtt2t='source ${HOME}/env/set_rtt2_ver3_t.sh'
+alias srtt3='source ${HOME}/env/set_rtt3.sh'
+
+# alias sligr='source ${HOME}/env/set_lig_adr_rfsoc.sh'
+# alias sligm='source ${HOME}/env/set_lig_adr_mpsoc.sh'
+# alias slig='source ${HOME}/env/set_lig701_jig.sh'
+# alias slige='source ${HOME}/env/set_lig701_elint.sh'
+# alias sligai='source ${HOME}/env/set_lig701_ai.sh'
+
+alias slig='source ${HOME}/env/set_lig_mnj.sh'
+alias sligbdjd='source ${HOME}/env/set_lig_bdjd.sh'
+alias sligbdjdr='source ${HOME}/env/set_lig_bdjd_rfsoc.sh'
+alias sligbdjdm='source ${HOME}/env/set_lig_bdjd_mpsoc.sh'
+alias sligbdjdrf='source ${HOME}/env/set_lig_bdjd_rf_ctrl.sh'
+alias sligmnj='source ${HOME}/env/set_lig_mnj.sh'
+alias sligeoir='source ${HOME}/env/set_lig_eoir.sh'
+
+# alias srtt_5g_245='source ${HOME}/env/set_rtt_5g_245.sh'
+# alias srtt_g2='source ${HOME}/env/set_rtt_g2.sh'
+# alias srttfr1='source ${HOME}/env/set_rtt_g2_fr1.sh'
+# alias srttfr1='source ${HOME}/env/set_rtt_g2_fr1_m1_v2.sh'
+# alias srttfr1m1='source ${HOME}/env/set_rtt_g2_fr1_m1.sh'
+# alias srttfr1m1v2='source ${HOME}/env/set_rtt_g2_fr1_m1_v2.sh'
+# alias srttfr1_ddr='source ${HOME}/env/set_rtt_g2_fr1_ddr.sh'
+# alias srttfr1es1='source ${HOME}/env/set_rtt_g2_fr1_es1.sh'
+# alias srttfr1es11g='source ${HOME}/env/set_rtt_g2_fr1_es1_1g.sh'
+# alias srttfr1es2='source ${HOME}/env/set_rtt_g2_fr1_es2.sh'
+# alias srttfr1es2dfx='source ${HOME}/env/set_rtt_g2_fr1_es2_dfx.sh'
+# alias srtt2='source ${HOME}/env/set_rtt_g2_fr1_es2b.sh'
+# alias srtt2f='source ${HOME}/env/set_rtt_g2_fr1_es2b_fs.sh'
+# alias srtt2r='source ${HOME}/env/set_rtt_g2_fr1_es2b_rate_conv.sh'
+# alias tmux="tmux -2"
+# alias srttfr2_ddr='source ${HOME}/env/set_rtt_g2_fr2_ddr.sh'
+# alias srttfr2='source ${HOME}/env/set_rtt_g2_fr2.sh'
+# alias srttfr2es1='source ${HOME}/env/set_rtt_g2_fr2_es1.sh'
+
+alias tmux_init='source ~/.tmux.init_setup'
+alias svn_pset='svn propset svn:keywords "Author HeadURL Id Revision" -R'
+
+export hlig=/home/paik/_inno_prj/_lig
+export hrtt2=/home/paik/_inno_prj/_rtt2
+export hrtt3=/home/paik/_inno_prj/_rtt3
+export hbdjdr=/home/paik/_lig_prj/_bdjd/rfsoc_8x4_mts
+export hbdjdm=/home/paik/_lig_prj/_bdjd/mpsoc
+
+#export DISPLAY=localhost:0.0
+
+export LIBGL_ALWAYS_INDIRECT=1
+
+#export PRJ_HOME="${HOME}/_project/5g_ixa_pci_scan"
+
+#export imp="${PRJ_HOME}/project_1"
+#export u="${PRJ_HOME}/project_1/project_1.srcs/sources_1"
+#export s="${PRJ_HOME}/project_1/project_1.sim/sim_1/behav"
+
+#
+# Tool releated
+#
+export XILINXD_LICENSE_FILE=2200@inno-fpga_linux
+export XIL_PAR_OVERRIDE_CLKPH1_RULES=1
+
+#--------------------------------------------------- Questa
+# export MTI_HOME=/home/fpga/Modelsim/Questar10.1e/questa_sim
+export MTI_HOME=/home/fpga/Modelsim/Questa2020.3/questasim
+export MGLS_LICENSE_FILE=1717@inno-fpga_linux
+export PATH=${PATH}:$MTI_HOME/linux_x86_64
+
+export PATH=/var/lib/snapd/snap/bin:${PATH}
+# source ${HOME}/bin/vivado_2014.4.src
+
+#
+# PROJECT based path
+#
+# export PRJ_HOME=${HOME}/_project/mmw_ixa2
+# export u=${PRJ_HOME}/units
+# export s=${PRJ_HOME}/units/ixa/sim
+# export imp=${HOME}/bit_file_gen/mmw_ixa2/imp
+# source ${HOME}/bin/vivado_2018.2.src
+# 
+
+# source ${HOME}/env/set_5g_ixa.sh
+# source ${HOME}/env/set_ixa2_122.sh
+# source ${HOME}/env/set_ixa2_245.sh
+# source ${HOME}/env/set_rtt.sh
+# source ${HOME}/env/set_rtt_g2_fr2.sh
+# source ${HOME}/env/set_rtt_g2_fr1_m1_v2.sh
+# source ${HOME}/env/set_rtt_g2_fr1_es1.sh
+# source ${HOME}/env/set_rtt_g2_fr1_es2b.sh
+# source ${HOME}/env/set_rtt_g2_fr1_es2b_rate_conv.sh
+
+# export LIBDIR=/home/paik/tools/local/lib
+# export LD_LIBRARY_PATH=$LIBDIR:${LD_LIBRARY_PATH}
+# export LD_RUN_PATH=$LIBDIR:${LD_RUN_PATH}
+
+# export DISPLAY=localhost:0.0
+# export XILINX_LOCAL_USER_DATA="no"
+
+source /opt/rh/devtoolset-11/enable 
